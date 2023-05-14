@@ -1,4 +1,17 @@
-﻿﻿Version 0.3.0.31
+﻿﻿Version 0.3.0.32
+====================================
+
+- Move business classes out of main app, and into a new NuGet package, rNascar23.Sdk. This aws done for two reasons:
+	1. Allow other developers to use the NuGet package to develop applications that read from the NASCAR Api, without having to write code to directly access the endpoints.
+	2. Support multiple platforms with a single codebase. The NuGet package supports .net6.0, .netStandard2.0, and mac-catalyst. (Yes, this part of the code runs on Mac now!)
+
+- Create a new configuration file that contains the addresses of all the api endpoints. 
+	The last rNascar app broke because the endpoints changed. This external configuration file will allow users to edit the addresses if they ever change in the future,
+	and allow the app to continue working.
+
+- Numerous bug fixes related to migrating the code to the NuGet package, and making the package more stable in general.
+
+﻿Version 0.3.0.31
 ====================================
 
 Bug Fixes
