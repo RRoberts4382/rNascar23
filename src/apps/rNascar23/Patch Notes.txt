@@ -1,4 +1,13 @@
-﻿﻿Version 0.3.0.32
+﻿﻿Version 0.3.0.33
+====================================
+
+Bug Fixes
+-----------
+- Handle null driver id in video feed list
+	Video feed list has new feeds, which are not driver-specific (Battle cam, etc...). These records have a null value for the driver id field.
+	Updated code to allow null driver id without causing an error.
+
+﻿Version 0.3.0.32
 ====================================
 
 - Move business classes out of main app, and into a new NuGet package, rNascar23.Sdk. This aws done for two reasons:
